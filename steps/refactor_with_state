@@ -1,8 +1,6 @@
-id: funneldrop_reproduce_locally
+id: refactor_with_state
 hints:
-- All modern web browsers can show you what your website looks like on mobile, so
-  you'll be able to easily debug and develop for mobile. You can use the developer
-  tools to see it.
+- 
 startFlow:
   do:
   - actionId: bot_message
