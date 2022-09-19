@@ -1,4 +1,4 @@
-id: funneldrop_fixing_bug_pr
+id: hooks_refactoring_pr
 hints:
 - Try to inspect the problematic view and see where it is on the screen
 startFlow:
