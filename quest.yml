@@ -9,6 +9,6 @@ steps:
 duration: 0.5
 skills:
 - frontend
-- reafactoring
+- refactoring
 questDependency: docker_localsetup
 slogan: Hooks Refactoring
