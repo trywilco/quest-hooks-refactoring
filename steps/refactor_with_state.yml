@@ -1,0 +1,59 @@
+id: refactor_with_state
+hints: []
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: head-of-rd
+      messages:
+      - text: Please change `CommentInput.js` to be functional compoenent
+        delay: 1500
+githubActions:
+  frontend:
+    cmd:
+      - CI=true yarn test
+trigger:
+  type: github_pr_lifecycle_status
+  flowNode:
+    switch:
+      key: "${eventType}"
+      cases:
+        github_pr_opened:
+          do:
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+              - text: "On it, I'll review the changes right away."
+                delay: 1000
+          - actionId: github_pr_comment
+            params:
+              person: head-of-rd
+              message: "On it, I'll review the changes right away."
+        github_pr_workflow_complete_success:
+          do:
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+              - text: "Nailed it! Excellent job @${user.githubuser}! You can now merge the PR."
+                delay: 2000
+          - actionId: github_pr_approve
+            params:
+              person: head-of-rd
+              message: "Nailed it! Excellent job @${user.githubuser}! You can now merge the PR."
+        github_pr_workflow_complete_failure:
+          do:
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+              - text: "Make sure your fix passes all the checks, then try again please."
+                delay: 3000
+          - actionId: github_pr_reject
+            params:
+              person: head-of-rd
+              message: "Looks like there was some problem with the change. Can you take a second look?"
+        github_pr_merged:
+          do:
+          - actionId: finish_step
