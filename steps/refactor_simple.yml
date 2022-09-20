@@ -7,11 +7,11 @@ startFlow:
     params:
       person: head-of-rd
       messages:
-      - text: “Hey, we need your help. We have an important feature we need to update but it’s based on some old code that Carl wrote.”
+      - text: Hey, we need your help. We have an important feature we need to update but it’s based on some old code that Carl wrote.
         delay: 1000
-      - text: “It’s kinda messy and well, he’s not available for comment. Before we can continue developing the feature, we need to clean up the old code.”
+      - text: It’s kinda messy and well, he’s not available for comment. Before we can continue developing the feature, we need to clean up the old code.
         delay: 1000
-      - text: “Can you please **refactor the code to use hooks** and **open a PR** when you’re done?”
+      - text: Can you please **refactor the code to use hooks** and **open a PR** when you’re done?
         delay: 1000
 githubActions:
   frontend:
@@ -31,36 +31,36 @@ trigger:
             params:
               person: head-of-rd
               messages:
-              - text: “Saw your PR, reviewing it now.”
+              - text: Saw your PR, reviewing it now.
                 delay: 1000
           - actionId: github_pr_comment
             params:
               person: head-of-rd
-              message: “Saw your PR, reviewing it now.”
+              message: Saw your PR, reviewing it now.
         github_pr_workflow_complete_success:
           do:
           - actionId: bot_message
             params:
               person: head-of-rd
               messages:
-              - text: “Great work. Go ahead and merge the PR.”
+              - text: Great work. Go ahead and merge the PR.
                 delay: 2000
           - actionId: github_pr_approve
             params:
               person: head-of-rd
-              message: “Great work. Go ahead and merge the PR.”
+              message: Great work. Go ahead and merge the PR.
         github_pr_workflow_complete_failure:
           do:
           - actionId: bot_message
             params:
               person: head-of-rd
               messages:
-              - text: “Looks like there’s a problem. Please double-check your code and try again.”
+              - text: Looks like there’s a problem. Please double-check your code and try again.
                 delay: 3000
           - actionId: github_pr_reject
             params:
               person: head-of-rd
-              message: “Seems like there might be a problem with your code. Can you take a second look?” 
+              message: Seems like there might be a problem with your code. Can you take a second look? 
         github_pr_merged:
           do:
           - actionId: finish_step
