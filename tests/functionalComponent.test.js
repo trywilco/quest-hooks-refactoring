@@ -1,5 +1,6 @@
-const file = process.argv[process.argv.length - 1];
-const Component = require(file).default;
+const yargs = require("yargs");
+const argv = yargs(process.argv).argv;
+const Component = require(argv.component).default;
 
 function isFunctionalComponent(Component) {
   return (
