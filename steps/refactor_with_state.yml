@@ -10,8 +10,10 @@ startFlow:
         delay: 1500
 githubActions:
   frontend:
-    cmd:
-      - CI=true yarn test
+    capabilities:
+      - yargs
+    testFile: functionalComponent.test.js
+    cmd: CI=true yarn test --component=./components/CommentInput.js
 trigger:
   type: github_pr_lifecycle_status
   flowNode:
