@@ -9,3 +9,9 @@ User will do it with opening a PR, where we check that the component's unit test
 Step 2:
 We have a little more complex compnent: `CommentInput.jsx` with a state and callback, the user need to make it a functional component.
 User will do it with opening a PR, where we check that the component's unit test is working + that now the component is a function
+
+
+Bullet points: 
+-	Refactoring a simple React class component into a functional component 
+-	Refactoring a complex React class component into a functional component 
+
