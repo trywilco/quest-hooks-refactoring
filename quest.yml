@@ -1,7 +1,7 @@
 id: hooks-refactoring
 title: Hooks of Change
-description: OK, we delayed for as long as we could, but the time has come to refactor. Our React app has to be updated and we should refactor it to use React hooks. It might not affect users, or add any product value, but it’ll help developers to move quicker. In this quest, you will refactor a React application using hooks. This change will make it significantly easier to read, test and reuse code, thus saving development time in the future.
-summary: Hooks refactoring
+description: These days, most modern React applications use Hooks in function components instead of other older component types when writing new code. Why, you ask? Hooks allow developers to write cleaner code, with less boilerplate and reuse stateful behavior between different components. But what can you do if you’ve inherited messy legacy code that makes you cringe? In this quest, you’ll learn to refactor a React application using hooks to make it easier to read, test and reuse code so you can save development time in the future.
+summary: Who’s awesome? You’re awesome! You now know how to modernize your application code by refactoring with React hooks to use functions as React components. 
 level: beginner
 steps:
 - refactor_simple
@@ -11,4 +11,4 @@ skills:
 - frontend
 - refactoring
 questDependency: docker_localsetup
-slogan: Hooks Refactoring
+slogan: Small changes lead to greatness.  
