@@ -16,9 +16,9 @@ startFlow:
 githubActions:
   frontend:
     capabilities:
-    - jest-puppeteer
-    - puppeteer
-    testFile: "profile.test.js"
+      - yargs
+    testFile: functionalComponent.test.js
+    cmd: CI=true yarn test --component=./components/Header.js
 trigger:
   type: github_pr_lifecycle_status
   flowNode:
