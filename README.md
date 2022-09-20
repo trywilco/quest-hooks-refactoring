@@ -12,6 +12,6 @@ User will do it with opening a PR, where we check that the component's unit test
 
 
 Bullet points: 
--	Refactoring a simple React class component into a functional component 
--	Refactoring a complex React class component into a functional component 
+-	Refactoring a simple class component into a functional component with React Hooks 
+-	Refactoring a complex class component into a functional component with React Hooks 
 
