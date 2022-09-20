@@ -11,7 +11,7 @@ startFlow:
         delay: 1000
       - text: It’s kinda messy and well, he’s not available for comment. Before we can continue developing the feature, we need to clean up the old code.
         delay: 1000
-      - text: Can you please **refactor the code to use hooks** and **open a PR** when you’re done?
+      - text: Let's start with the header component. Can you please **refactor the code to use hooks** and **open a PR** when you’re done?
         delay: 1000
 githubActions:
   frontend:
