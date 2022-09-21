@@ -1,6 +1,5 @@
 id: refactor_simple
-hints:
-- Try to inspect the problematic view and see where it is on the screen
+hints:[]
 startFlow:
   do:
   - actionId: bot_message
