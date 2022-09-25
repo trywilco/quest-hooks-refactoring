@@ -11,7 +11,8 @@ githubActions:
   frontend:
     capabilities:
       - yargs
-    testFile: functionalComponent.test.js --component=./components/CommentInput.js
+    testFile: functionalComponent.test.js
+    testArgs: --component=./components/CommentInput.js
 trigger:
   type: github_pr_lifecycle_status
   flowNode:
