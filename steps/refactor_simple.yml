@@ -15,7 +15,8 @@ githubActions:
   frontend:
     capabilities:
       - yargs
-    testFile: functionalComponent.test.js --component=./components/Header.js
+    testFile: functionalComponent.test.js
+    testArgs: --component=./components/Header.js
 trigger:
   type: github_pr_lifecycle_status
   flowNode:
