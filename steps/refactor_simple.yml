@@ -6,11 +6,11 @@ startFlow:
     params:
       person: head-of-rd
       messages:
-      - text: Hey, we need your help. We have an important feature we need to update but it’s based on some old code that Carl wrote.
-        delay: 1000
-      - text: It’s kinda messy and well, he’s not available for comment. Before we can continue developing the feature, we need to clean up the old code.
-        delay: 1000
-      - text: Let's start with the header component. Can you please **refactor the code to use hooks** and **open a PR** when you’re done?
+      - text: Hey there! There’s an old React app we need to update, but something happened to its original developers. 
+        delay: 1700
+      - text: It’s not that the company doesn’t know what happened to them. Believe me, we know all too well—I just found one of the miniature armadillos from that incident a few days ago. But I digress. The point is that they’re not with us any longer. Before our teams begin resurrecting that app, we need you to go over it and refactor it. Mostly, that means you’ll need to use Hooks. 
+        delay: 2500
+      - text: Let's start with the header component. Please **refactor the code to use Hooks** and **open a PR** when you’re done!
         delay: 1000
 githubActions:
   frontend:
@@ -30,19 +30,19 @@ trigger:
             params:
               person: head-of-rd
               messages:
-              - text: Saw your PR, reviewing it now.
+              - text: Neat, let me review your PR. 
                 delay: 1000
           - actionId: github_pr_comment
             params:
               person: head-of-rd
-              message: Saw your PR, reviewing it now.
+              message: Saw your PR, reviewing it now. 
         github_pr_workflow_complete_success:
           do:
           - actionId: bot_message
             params:
               person: head-of-rd
               messages:
-              - text: Great work. Go ahead and merge the PR.
+              - text: Perfect, you can merge the PR now and we’ll continue.
                 delay: 2000
           - actionId: github_pr_approve
             params:
@@ -54,12 +54,14 @@ trigger:
             params:
               person: head-of-rd
               messages:
-              - text: Looks like there’s a problem. Please double-check your code and try again.
+              - text: Hmmm, looks like there’s a problem here. Can you go over the code again?
                 delay: 3000
           - actionId: github_pr_reject
             params:
               person: head-of-rd
-              message: Seems like there might be a problem with your code. Can you take a second look? 
+              message: Seems like there might be a problem with your code. Can you take a second look?
+
+
         github_pr_merged:
           do:
           - actionId: finish_step
