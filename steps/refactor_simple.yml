@@ -1,5 +1,4 @@
 id: refactor_simple
-hints:[]
 startFlow:
   do:
   - actionId: bot_message

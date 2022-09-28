@@ -1,5 +1,4 @@
 id: refactor_with_state
-hints: []
 startFlow:
   do:
   - actionId: bot_message
