@@ -12,7 +12,7 @@ githubActions:
     capabilities:
       - yargs
     testFile: functionalComponent.test.js
-    cmd: CI=true yarn test --component=./components/CommentInput.js
+    cmd: CI=true yarn test --component=./components/Item/CommentInput.js
 trigger:
   type: github_pr_lifecycle_status
   flowNode:
