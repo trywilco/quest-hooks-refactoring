@@ -9,7 +9,7 @@ startFlow:
         delay: 1700
       - text: It’s not that the company doesn’t know what happened to them. Believe me, we know all too well—I just found one of the miniature armadillos from that incident a few days ago. But I digress. The point is that they’re not with us any longer. Before our teams begin resurrecting that app, we need you to go over it and refactor it. Mostly, that means you’ll need to use Hooks. 
         delay: 2500
-      - text: Let's start with the header component. Please **refactor the code to use Hooks** and **open a PR** when you’re done!
+      - text: Let's start with the header component. Please **refactor the code to make it a functional component** and **open a PR** when you’re done!
         delay: 1000
 githubActions:
   frontend:
