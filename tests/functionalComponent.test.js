@@ -10,7 +10,8 @@ function isFunctionalComponent(Component) {
         Component.prototype && // native arrows don't have prototypes
         Component.prototype.isReactComponent
       ) // special property
-    )
+    ) &&
+    !!Component({}) // make sure the component can be rendered
   );
 }
 
