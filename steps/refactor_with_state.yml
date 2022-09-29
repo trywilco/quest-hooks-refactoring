@@ -1,4 +1,7 @@
 id: refactor_with_state
+hints: 
+  - Replace the connect function on the export with `useDispatch` hook by [react-redux](https://react-redux.js.org/api/hooks#usedispatch) inside the functional component
+  - Upgrade `react-redux` to a version that supports hooks
 startFlow:
   do:
   - actionId: bot_message
