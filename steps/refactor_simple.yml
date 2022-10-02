@@ -7,7 +7,7 @@ startFlow:
     params:
       person: head-of-rd
       messages:
-      - text: Hey there! There’s an old React app we need to update. We want to make it easier to reuse stateful logic between components, so we decided to use [Hooks](https://reactjs.org/docs/hooks-intro.html#motivation) since they're pretty much the best thing since React 16.8.   
+      - text: Hey there! There’s an old React app we need to update. We want to make it easier to reuse stateful logic between components, so we decided to use [Hooks](https://reactjs.org/docs/hooks-intro.html#motivation).   
         delay: 2500
       - text: Let's start with something small - [refactoring a single class component into a functional component](https://reactjs.org/docs/hooks-overview.html).
         delay: 2500
