@@ -16,6 +16,7 @@ startFlow:
 githubActions:
   frontend:
     testFile: headerIsFunctionalComponent.test.js
+    cmd: yarn test --ci --watchAll=false --silent
 trigger:
   type: github_pr_lifecycle_status
   flowNode:
