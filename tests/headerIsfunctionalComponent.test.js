@@ -1,6 +1,4 @@
-const yargs = require("yargs");
-const argv = yargs(process.argv).argv;
-const Component = require(argv.component).default;
+import Header from "./components/Header";
 
 function isFunctionalComponent(Component) {
   return (
@@ -14,6 +12,6 @@ function isFunctionalComponent(Component) {
   );
 }
 
-test(`Componenet is a functional Componenet`, () => {
-  expect(isFunctionalComponent(Component)).toBeTruthy();
+test(`Component is a functional Component`, () => {
+  expect(isFunctionalComponent(Header)).toBeTruthy();
 });
