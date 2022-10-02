@@ -13,6 +13,7 @@ startFlow:
 githubActions:
   frontend:
     testFile: commentInputFunctionalComponent.test.js
+    cmd: yarn test --ci --watchAll=false --silent
 trigger:
   type: github_pr_lifecycle_status
   flowNode:
