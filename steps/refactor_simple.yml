@@ -15,10 +15,8 @@ startFlow:
         delay: 1000
 githubActions:
   frontend:
-    capabilities:
-      - yargs
-    testFile: functionalComponent.test.js
-    cmd: yarn test --ci --watchAll=false --silent --component=./components/Header.js
+    testFile: headerIsFunctionalComponent.test.js
+    cmd: yarn test --ci --watchAll=false --silent
 trigger:
   type: github_pr_lifecycle_status
   flowNode:
