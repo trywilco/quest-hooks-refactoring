@@ -12,7 +12,7 @@ startFlow:
         delay: 1500
 githubActions:
   frontend:
-    testFile: headerIsfunctionalComponent.test.js
+    testFile: commentInputFunctionalComponent.test.js
 trigger:
   type: github_pr_lifecycle_status
   flowNode:
