@@ -28,7 +28,7 @@ trigger:
               person: head-of-rd
               messages:
               - text: Thanks, I'll review the changes right away.
-                delay: 1000
+                delay: 2000
           - actionId: github_pr_comment
             params:
               person: head-of-rd
@@ -40,7 +40,7 @@ trigger:
               person: head-of-rd
               messages:
               - text: Excellent job ${user.firstName}! Go ahead and merge the PR.
-                delay: 2000
+                delay: 2500
           - actionId: github_pr_approve
             params:
               person: head-of-rd
@@ -52,7 +52,7 @@ trigger:
               person: head-of-rd
               messages:
               - text: I appreciate you trying, but I less appreciate you failing. Check your code, then try again.
-                delay: 3000
+                delay: 3500
           - actionId: github_pr_reject
             params:
               person: head-of-rd
