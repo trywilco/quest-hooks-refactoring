@@ -8,15 +8,15 @@ startFlow:
       person: head-of-rd
       messages:
       - text: Hi again, lovely weather outside, isn't it?   
-        delay: 1800
+        delay: 2500
       - text: Yes, great, wonderful, good. Anyway, there's an old React app we need to update, to make it easier to reuse stateful logic between components.
-        delay: 2000
+        delay: 4000
       - text: That’s why we decided to use [Hooks](https://reactjs.org/docs/hooks-intro.html#motivation)
-        delay: 1200
+        delay: 3200
       - text: https://media.giphy.com/media/B4ZgcoPTHYXL2/giphy.gif 
-        delay: 3000
+        delay: 4200
       - text: Let's start with something small - [refactoring a single class component into a functional component](https://reactjs.org/docs/hooks-overview.html).
-        delay: 2000
+        delay: 3500
       - text: So please :instruction[refactor the code in the `Header.js` component] to make it a functional component and **open a PR** when you’re done!
         delay: 1500
 githubActions:
