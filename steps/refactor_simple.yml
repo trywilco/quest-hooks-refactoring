@@ -18,7 +18,7 @@ startFlow:
       - text: Let's start with something small - [refactoring a single class component into a functional component](https://reactjs.org/docs/hooks-overview.html).
         delay: 3500
       - text: So please :instruction[refactor the code in the `Header.js` component] to make it a functional component and **open a PR** when you’re done!
-        delay: 1500
+        delay: 2000
 githubActions:
   frontend:
     testFile: headerIsFunctionalComponent.test.js
@@ -36,7 +36,7 @@ trigger:
               person: head-of-rd
               messages:
               - text: Give me a minute to review your PR. 
-                delay: 1000
+                delay: 1700
           - actionId: github_pr_comment
             params:
               person: head-of-rd
@@ -48,7 +48,7 @@ trigger:
               person: head-of-rd
               messages:
               - text: Perfect, you can merge the PR now and we’ll continue.
-                delay: 2000
+                delay: 2300
           - actionId: github_pr_approve
             params:
               person: head-of-rd
@@ -60,7 +60,7 @@ trigger:
               person: head-of-rd
               messages:
               - text: Hmmm, looks like there’s a problem here. Can you go over the code again?
-                delay: 3000
+                delay: 3500
           - actionId: github_pr_reject
             params:
               person: head-of-rd
