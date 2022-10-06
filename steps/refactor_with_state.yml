@@ -8,7 +8,7 @@ startFlow:
       person: head-of-rd
       messages:
       - text: Looking good! Now we can refactor an entire component along with its state.
-        delay: 1700
+        delay: 2200
       - text:  Please :instruction[o**modify `CommentInput.js` to use Hooks] and then **open another PR**.
         delay: 1800
 githubActions:
