@@ -7,8 +7,8 @@ startFlow:
     params:
       person: head-of-rd
       messages:
-      - text: Thanks! Oh, also, Hi there, how are you, lovely weather outside, isn't it?   
-        delay: 2500
+      - text: Thanks! Also, Hi there, how are you, lovely weather outside, isn't it?   
+        delay: 3500
       - text: Yes, great, wonderful, good. Anyway, there's an old React app we need to update, to make it easier to reuse stateful logic between components.
         delay: 4300
       - text: That’s why we decided to use [Hooks](https://reactjs.org/docs/hooks-intro.html#motivation)
