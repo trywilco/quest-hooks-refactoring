@@ -1,14 +1,16 @@
 id: refactor_with_state
 hints: 
-  - You can use `useState` to [keep the component state updated](https://reactjs.org/docs/hooks-state.html).
+  - Just remember that you can use `useState` to [keep the component state updated](https://reactjs.org/docs/hooks-state.html).
 startFlow:
   do:
   - actionId: bot_message
     params:
       person: head-of-rd
       messages:
-      - text: Now we can refactor an entire component along with its state. Please **modify `CommentInput.js` to use Hooks** and then **open another PR**.
-        delay: 1500
+      - text: Looking good! Now we can refactor an entire component along with its state.
+        delay: 2200
+      - text:  Please :instruction[**modify `CommentInput.js` to use Hooks**] and then **open another PR**.
+        delay: 1800
 githubActions:
   frontend:
     testFile: commentInputFunctionalComponent.test.js
@@ -25,36 +27,36 @@ trigger:
             params:
               person: head-of-rd
               messages:
-              - text: I'll review the changes right away.
-                delay: 1000
+              - text: Thanks, I'll review the changes right away.
+                delay: 2000
           - actionId: github_pr_comment
             params:
               person: head-of-rd
-              message: I'll review the changes right away.
+              message: Thanks, I'll review the changes right away.
         github_pr_workflow_complete_success:
           do:
           - actionId: bot_message
             params:
               person: head-of-rd
               messages:
-              - text: Excellent job ${user.firstName}! You can now merge the PR.
-                delay: 2000
+              - text: Excellent job ${user.firstName}! Go ahead and merge the PR.
+                delay: 2500
           - actionId: github_pr_approve
             params:
               person: head-of-rd
-              message: Woohoo! Excellent job @${user.githubuser}! You can now merge the PR.
+              message: Excellent job @${user.githubuser}! Go ahead and merge the PR.
         github_pr_workflow_complete_failure:
           do:
           - actionId: bot_message
             params:
               person: head-of-rd
               messages:
-              - text: Nope, something's not right. Check your code, then please try again.
-                delay: 3000
+              - text: I appreciate you trying, but I less appreciate you failing. Check your code, then try again.
+                delay: 3500
           - actionId: github_pr_reject
             params:
               person: head-of-rd
-              message: Nice try, but it looks like the unit test failed. Can you check what went wrong?
+              message: I appreciate you trying, but I less appreciate you failing. Can you check what went wrong?
         github_pr_merged:
           do:
           - actionId: finish_step

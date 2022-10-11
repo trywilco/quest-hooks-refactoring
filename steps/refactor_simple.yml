@@ -1,18 +1,24 @@
 id: refactor_simple
 hints: 
-  - Follow the "[Introducing Hooks](https://reactjs.org/docs/hooks-intro.html)" guide and convert the class into a function
+  -  Umm, you should probably try to follow the "[Introducing Hooks](https://reactjs.org/docs/hooks-intro.html)" guide and convert the class into a function.
 startFlow:
   do:
   - actionId: bot_message
     params:
       person: head-of-rd
       messages:
-      - text: So... there’s an old React app we need to update. We want to make it easier to reuse stateful logic between components, so we decided to use [Hooks](https://reactjs.org/docs/hooks-intro.html#motivation).   
-        delay: 2500
+      - text: Thanks! Also, Hi there, how are you, lovely weather outside, isn't it?   
+        delay: 3500
+      - text: Yes, great, wonderful, good. Anyway, there's an old React app we need to update, to make it easier to reuse stateful logic between components.
+        delay: 4300
+      - text: That’s why we decided to use [Hooks](https://reactjs.org/docs/hooks-intro.html#motivation)
+        delay: 4000
+      - text: https://media.giphy.com/media/B4ZgcoPTHYXL2/giphy.gif 
+        delay: 4200
       - text: Let's start with something small - [refactoring a single class component into a functional component](https://reactjs.org/docs/hooks-overview.html).
-        delay: 2500
-      - text: Please **refactor the code in the `Header.js` component to make it a functional component** and **open a PR** when you’re done!
-        delay: 1000
+        delay: 3500
+      - text: So please :instruction[**refactor the code in the `Header.js` component**] to make it a functional component and **open a PR** when you’re done!
+        delay: 2000
 githubActions:
   frontend:
     testFile: headerIsFunctionalComponent.test.js
@@ -30,7 +36,7 @@ trigger:
               person: head-of-rd
               messages:
               - text: Give me a minute to review your PR. 
-                delay: 1000
+                delay: 1700
           - actionId: github_pr_comment
             params:
               person: head-of-rd
@@ -42,7 +48,7 @@ trigger:
               person: head-of-rd
               messages:
               - text: Perfect, you can merge the PR now and we’ll continue.
-                delay: 2000
+                delay: 2300
           - actionId: github_pr_approve
             params:
               person: head-of-rd
@@ -54,7 +60,7 @@ trigger:
               person: head-of-rd
               messages:
               - text: Hmmm, looks like there’s a problem here. Can you go over the code again?
-                delay: 3000
+                delay: 3500
           - actionId: github_pr_reject
             params:
               person: head-of-rd
