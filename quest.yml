@@ -2,7 +2,9 @@ id: hooks-of-change
 title: Hooks of Change
 description: These days, people who write React apps prefer to use Hooks in functional components instead of using class components. Why? Hooks allow developers to write cleaner code with less boilerplate and reuse stateful behavior between components. But what can you do if you’ve inherited messy legacy code? You refactor, of course! In this quest, you’ll learn to refactor a React app using Hooks. At the end of the day, you’ll have an app with code that’s easier to read and reuse — saving you time in the future.
 summary: Congratulations! You now know how to modernize pre-React 16 apps by refactoring them to use Hooks, making their code easier to work with.
-
+learningObjectives:
+- Refactoring a simple class component into a functional component with React Hooks
+- Refactoring a complex class component into a functional component with React Hooks, Props
 level: beginner
 steps:
 - refactor_simple
