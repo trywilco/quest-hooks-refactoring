@@ -1,4 +1,6 @@
 id: refactor_simple
+learningObjectives:
+- Refactoring a simple class component into a functional component with React Hooks
 hints: 
   -  Umm, you should probably try to follow the "[Introducing Hooks](https://reactjs.org/docs/hooks-intro.html)" guide and convert the class into a function.
 startFlow:
