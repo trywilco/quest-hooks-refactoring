@@ -1,4 +1,6 @@
 id: refactor_with_state
+learningObjectives:
+- Refactoring a complex class component into a functional component with React Hooks, Props
 hints: 
   - Just remember that you can use `useState` to [keep the component state updated](https://reactjs.org/docs/hooks-state.html).
 startFlow:
