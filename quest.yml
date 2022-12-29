@@ -10,5 +10,17 @@ duration: 0.5
 skills:
 - frontend
 - refactoring
-questDependency: docker_localsetup
 slogan: Yo ho ho and a bottle of code
+questDependency: docker_localsetup
+messages:
+  questFinished:
+    person: head-of-rd
+    messages:
+    - text: Nice work on updating that React app, ${user.firstName}! It was starting to look like it was built with smoke signals.
+      delay: 1200
+    - text: You're doing splendidly so far, and I would hate to see you ruining your own momentum
+      delay: 1700
+    - text: So... What do you say, up for another task?
+      delay: 1300
+      components:
+      - type: schedule_learning_time
