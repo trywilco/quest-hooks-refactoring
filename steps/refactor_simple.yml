@@ -83,20 +83,20 @@ solution:
           - text: Following the "Hooks at a Glance" documentation, we can see that the first thing we need to do here is change our class into a function.
           - text: That's fairly easy, all you need to do is change the declaration, and instead of having a render function, we need to return the JSX rendering of the component. This should roughly look like the following snippet -
           - text: |
-            ```
-            function Header(props) {
-              return (
-                <nav>
-                  ...
-                </nav>
-              )
-            }
-            ```
+              ```
+              function Header(props) {
+                return (
+                  <nav>
+                    ...
+                  </nav>
+                )
+              }
+              ```
           - text: However, if we save this and try to open up the browser, we'll see nothing is rendered. Digging into the developer tools console, we'll find the following error - 
           - text: |
-            ```
-            Uncaught TypeError: Cannot read properties of undefined (reading 'props')
-            ```
+              ```
+              Uncaught TypeError: Cannot read properties of undefined (reading 'props')
+              ```
           - text: When `Header` was a class component, it had it's members being passed on invocation, so we could have accessed them with `this.props`. However, once we changed it to a function, we need to explicitly accept those props.
           - text: We can do this either by declaring the entire props dictionary as a parameter - `function Header(props) {}`, or by unpacking it to the desired variables - `function Header({ currentUser }) {}` . 
           - text: Of course, this means we will need to change the usage of those parameters inside the function. 
