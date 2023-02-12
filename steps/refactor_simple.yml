@@ -78,6 +78,7 @@ solution:
   do:
     - actionId: bot_message
       params:
+        person: head-of-rd
         messages: 
           - text: No worries, let's see how we can refactor those class components.
           - text: Following the "Hooks at a Glance" documentation, we can see that the first thing we need to do here is change our class into a function.

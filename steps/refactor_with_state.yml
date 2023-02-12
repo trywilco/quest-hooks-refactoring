@@ -68,6 +68,7 @@ solution:
   do:
     - actionId: bot_message
       params:
+        person: head-of-rd
         messages: 
           - text: The easy part of this step is similar to the previous one - we need to change the class component into a function component, and convert the `render()` function into a return statement. 
           - text: Once you're done with it, you'll see some errors. This makes total sense, as class components have no constructor! We will need to adjust the state management, from being stored on class members (`this.state`, which is initialized in the constructor), to use hooks. 
