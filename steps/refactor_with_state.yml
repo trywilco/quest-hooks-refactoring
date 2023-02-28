@@ -63,3 +63,25 @@ trigger:
         github_pr_merged:
           do:
           - actionId: finish_step
+
+solution: 
+  do:
+    - actionId: bot_message
+      params:
+        person: head-of-rd
+        messages: 
+          - text: The easy part of this step is similar to the previous one - we need to change the class component into a function component, and convert the `render()` function into a return statement. 
+          - text: Once you're done with it, you'll see some errors. This makes total sense, as class components have no constructor! We will need to adjust the state management, from being stored on class members (`this.state`, which is initialized in the constructor), to use hooks. 
+          - text: Which hook are we going to use? As implied above, we need to store a component's state, and that's why we have the `useState` hook. 
+          - text: This hook receives the default value, and returns a tuple - he current state value and a function that lets you update it (a setter). So let's go ahead and declare a state that will store the comment body, with a default of empty string. 
+          - text: |
+              ```
+              const [body, setBody] = useState("")
+              ```
+          - text: \[as a side note, see that the best practice for naming the unpacked tuple is `value` and `setValue`\]
+          - text: Now we can use the `body` variable instead of `this.state.body`, and pass the `setBody` setter directly to the `onChange` method - 
+          - text: |
+              ```
+              onChange={(ev) => setBody(ev.target.value)}
+              ```
+          - text: You can complete the rest of the function adjustments, run a quick functional test of posting a comment on an item, and open a PR once everything works with hooks.
